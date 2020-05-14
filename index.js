@@ -87,8 +87,8 @@ function temperatureInF(t, unit) {
   }
 }
 
-console.log(temperatureInF(88, 'F'));
-console.log(temperatureInF(24, 'C'));
+// console.log(temperatureInF(88, 'F'));
+// console.log(temperatureInF(24, 'C'));
 
 /**
  * ### Challenge `makePersonObject`
@@ -106,9 +106,11 @@ console.log(temperatureInF(24, 'C'));
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(idval, nameval, emailval) {
+  return {id: idval, name: nameval, email: emailval};
 }
+
+// console.log(makePersonObject(5, 'Leia', 'leia@leia.com'));
 
 /**
  * ### Challenge `getName`
@@ -123,10 +125,11 @@ function makePersonObject(/* code here */) {
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName({id, name, email}) {
+  return 'Hello, my name is ' + name + '.';
 }
 
+console.log(getName({id: 1, name: 'Leia', email: 'leia@leia.com'}));
 
 /**
  * ### Challenge `appleIndex`
