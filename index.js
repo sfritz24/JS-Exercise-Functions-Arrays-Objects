@@ -325,17 +325,27 @@ function getLastCarInfo(inventory) {
  *     (1) an array which is an inventory of cars like the one inside /data/inventory.js.
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
+
+/*
+1) call argument = array
+2) create an new array for the years
+3) create a loop to check and gather said car_years
+4) push the result into the new array
+5) access the new array
+*/
+
 function getModelYears(arr) {
-  let newArr = [];
+  /* code here */
+  let carYears = [];
   for (let i = 0; i < arr.length; i++){
-    if (arr[i] === car_year){
-      newArr.push(car_year);
+    if (arr[i].car_year == '1900' || '2000'){
+      carYears.push(arr[i].car_year);
     }
   }
-  return newArr
+  return carYears;
 }
 
-console.log(inventory);
+console.log(getModelYears(inventory));
 
 /**
  * ### Challenge `getCarInfoById`
